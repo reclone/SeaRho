@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.16)
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
-project(navigator
-        EXTRA_COMPONENT_DIRS ../../components
-        COMPONENTS spartan7_sserial_config)
+
+set (EXTRA_COMPONENT_DIRS ../../components)
+
+project(navigator)
+
+spiffs_create_partition_image (assets assets FLASH_IN_PROJECT)
