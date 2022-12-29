@@ -1,8 +1,8 @@
-set (sources_list "src/main.cpp")
+set (sources_list src/fpga_config.cpp)
 
-set (include_dirs_list "")
+set (include_dirs_list include)
 
-set (requires_list "")
+set (requires_list driver)
 
 idf_component_register (SRCS ${sources_list} INCLUDE_DIRS ${include_dirs_list} REQUIRES ${requires_list})
 
